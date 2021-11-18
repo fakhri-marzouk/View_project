@@ -15,10 +15,15 @@ public class Fournisseur extends Personne {
 	public void setNum_fournisseur(int num_fournisseur) {
 		this.num_fournisseur = num_fournisseur;
 	}
-
 	@Override
-	public String toString() {
-		return super.toString()+"le numero du fournisseur "+this.num_fournisseur;
+	public void afficher() {
+		System.out.println("*********************");
+		System.out.println("le identifiant du fournisseur est : "+ this.num_fournisseur);
+		super.afficher();
 	}
+
 	
+	
+	
+
 }

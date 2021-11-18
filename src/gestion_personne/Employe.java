@@ -15,13 +15,13 @@ public class Employe extends Personne  {
 	public void setNum_employe(int num_employe) {
 		this.num_employe = num_employe ;
 	}
-
 	@Override
-	public String toString() {
-		return  super.toString()+"le numéro de l'employé "+this.num_employe;
+	public void afficher() {
+		System.out.println("*********************");
+		System.out.println("le identifiant du employe est : "+ this.num_employe);
+		super.afficher();
 	}
+
 	
-	
-	
-	
+
 }

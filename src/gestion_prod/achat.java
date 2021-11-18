@@ -17,5 +17,9 @@ public String getFournisseur() {
 public void setFournisseur(String fournisseur) {
 	this.fournisseur = fournisseur;
 }
+@Override
+public String toString() {
+	return super.toString()+ "fournisseur=" + fournisseur ;
+}
 
 }

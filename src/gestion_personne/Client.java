@@ -1,26 +1,30 @@
 package gestion_personne;
 
-
 public class Client extends Personne {
-	private int numClient ;
+	private int num ;
 
-	public Client(int cin, String nom, String prenom, int age, String mail, String adresse, int numero_telph, int numClient) {
+	public Client( int cin, String nom, String prenom, int age, String mail, String adresse, int numero_telph, int num) {
 		super(cin, nom, prenom, age, mail, adresse, numero_telph);
-		this.numClient = numClient;
+		this.num = num;
 	}
-
-	public int getNumClient() {
-		return numClient;
-	}
-
-
-	public void setNum(int numClient) {
-		this.numClient = numClient;
-	}
-
+	
 
 	@Override
-	public String toString( ) {
-		return  super.toString()+"le numéro du client "+this.numClient;
+	public void afficher() {
+		System.out.println("*********************");
+		System.out.println("le identifiant du client est : "+ this.num);
+		super.afficher();
 	}
+
+
+	public int getNum() {
+		return num;
+	}
+
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+
 }

@@ -7,8 +7,8 @@ import java.util.List;
 public class ListProduits {
 private List<produit> ListP;
 
-public ListProduits()
-{ListP=new ArrayList<>();
+public ListProduits(){
+	ListP=new ArrayList<>();
 	}
 
 public List<produit> getListP() {
@@ -18,8 +18,8 @@ public List<produit> getListP() {
 public void setListP(List<produit> listP) {
 	ListP = listP;
 }
-public void ajouterProduit(produit p)
-{ListP.add(p);
+public void ajouterProduit(produit p){
+	ListP.add(p);
 	}
 //////////STREAM////////
 public boolean rechercherProduit (int id) {

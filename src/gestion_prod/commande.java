@@ -1,6 +1,5 @@
 package gestion_prod;
-
-import gestion_personne.*;
+import gestion_personne.* ;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
