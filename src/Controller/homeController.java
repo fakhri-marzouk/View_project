@@ -1,4 +1,4 @@
-package application;
+package Controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,7 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class Controller  implements Initializable   {
+public class homeController  implements Initializable   {
 	
 	
 	@Override
@@ -44,7 +44,7 @@ public class Controller  implements Initializable   {
             Parent root1 = FXMLLoader.load(getClass().getResource("../view/product.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(root1,750,500);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
 	        stage.setResizable(false);
@@ -63,7 +63,7 @@ public class Controller  implements Initializable   {
             Parent root1 = FXMLLoader.load(getClass().getResource("../view/customer.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(root1,750,500);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
 	        stage.setResizable(false);

@@ -1,0 +1,13 @@
+.minus-button, .close-button {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 75%;
+    -fx-background-position: center center;
+    -fx-background-color: rgba(0, 88, 122, 1);
+}
+.minus-button {
+    -fx-background-image: url("../images/minus.png");
+}
+
+.close-button {
+    -fx-background-image: url("../images/close.png");
+}
