@@ -3,18 +3,18 @@ package gestion_prod;
 import java.util.Date;
 
 public class achat extends produit {
-private String fournisseur ;
+private int fournisseur ;
 
-public achat (int id,float prix ,Type type, Date dateExp,String fournisseur )
+public achat (int id,String nom ,float prix , Date dateExp,int fournisseur ,int quantite)
 {
-	super(id,prix,type,dateExp);
+	super(id,nom,prix,dateExp,quantite);
 	this.fournisseur=fournisseur;
 }
-public String getFournisseur() {
+public int getFournisseur() {
 	return fournisseur;
 }
 
-public void setFournisseur(String fournisseur) {
+public void setFournisseur(int fournisseur) {
 	this.fournisseur = fournisseur;
 }
 @Override

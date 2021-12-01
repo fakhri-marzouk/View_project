@@ -16,6 +16,11 @@ public class commande {
 		this.NumCommande = NumCommande;
 		this.dateCom = dateCom;
 		CommandeClient = new TreeMap<>(Comparator.comparing(Client::getNom));
+
+	}
+	public commande() {
+		CommandeClient = new TreeMap<>(Comparator.comparing(Client::getNom));
+
 	}
 
 	public int getNumCommande() {
@@ -44,10 +49,10 @@ public class commande {
 
 	public void ajouterClient(Client c) {
 
-		CommandeClient.putIfAbsent(c, new ListProduits());
+		CommandeClient.put(c,new ListProduits() ) ;
 	}
 
-	public void ajouterProduit(Client c, produit p) {
+	public void ajouterCommande(Client c, produit p) {
 		if (!CommandeClient.containsKey(c)) {
 			System.out.println("Client n'existe pas");
 		} else {
@@ -60,7 +65,6 @@ public class commande {
 	public void afficherCommande() {
 
 		CommandeClient.entrySet().stream().forEach(e -> {
-
 			System.out.println("****Client****");
 			System.out.println(e.getKey());
 			System.out.println("****Produits***");

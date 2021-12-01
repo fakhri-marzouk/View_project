@@ -9,8 +9,9 @@ public abstract class Personne {
 	protected String adresse ;
 	protected int numero_telph ;
 	
-	public Personne(int cin, String nom, String prenom, int age, String mail, String adresse, int numero_telph) {
-		this.cin = cin;
+	public Personne(int cin, String nom, String prenom, int age, String mail, String adresse, int numero_telph) throws personneException {
+		if(cin<0) throw new personneException("cin negatif !");
+		else this.cin= cin;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
@@ -33,7 +34,7 @@ public abstract class Personne {
 		System.out.println("l'adresse est : "+ this.adresse);
 		System.out.println("le numero de telephone est : "+ this.numero_telph);
 	}
-
+	
 	public int getCin() {
 		return cin;
 	}
@@ -76,5 +77,6 @@ public abstract class Personne {
 	public void setNumero_telph(int numero_telph) {
 		this.numero_telph = numero_telph;
 	}
+	
 	
 }

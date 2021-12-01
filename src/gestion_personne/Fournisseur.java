@@ -3,7 +3,7 @@ package gestion_personne;
 public class Fournisseur extends Personne {
 	private int num_fournisseur ;
 
-	public Fournisseur(int cin, String nom, String prenom, int age, String mail, String adresse, int numero_telph,int num_fournisseur) {
+	public Fournisseur(int cin, String nom, String prenom, int age, String mail, String adresse, int numero_telph,int num_fournisseur) throws personneException {
 		super(cin, nom, prenom, age, mail, adresse, numero_telph);
 		this.num_fournisseur = num_fournisseur;
 	}

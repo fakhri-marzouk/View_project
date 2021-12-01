@@ -1,3 +1,3 @@
 package gestion_prod;
 
-public enum Type{Cosmétique,Alimentaire,Nettoyage}
+public enum Type {Cosmétique,Alimentaire,Nettoyage}

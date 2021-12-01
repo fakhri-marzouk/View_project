@@ -27,7 +27,7 @@ public class Main {
 		 case 'a':
 		
 			System.out.println("Tapez D pour Client");
-			System.out.println("Tapez V pour Vendeur");
+			System.out.println("Tapez V pour Vendeur);
 			System.out.println("Tapez E pour Employee");
 			Scanner s1 = new Scanner(System.in);
 			String choix=s1.nextLine();
@@ -78,8 +78,10 @@ public class Main {
 				       String adresse=s1.next();
 				       System.out.println("Veuillez saisir le numero de telephone");
 				       int num_telph=s1.nextInt();
+				       System.out.println("Veuillez saisir le salaire ");
+				       float salaire=s1.nextFloat() ;
 										
-				       tabPers.addPersonne(new Employe(cin,nom,prenom,age,mail,adresse,num_telph,num)); ;
+				       tabPers.addPersonne(new Employe(cin,nom,prenom,age,mail,adresse,num_telph,num,salaire)); ;
 				     
 					   tabPers.afficher();
 										

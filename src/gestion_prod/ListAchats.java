@@ -6,8 +6,8 @@ import gestion_personne.*;
 public class ListAchats    {
 	private List<achat> ListA;
 
-	public ListAchats()
-	{ListA=new ArrayList<>();
+	public ListAchats(){
+		ListA=new ArrayList<>();
 		}
 
 	public List<achat> getListA() {
@@ -17,8 +17,8 @@ public class ListAchats    {
 	public void setListP(List<achat> listA) {
 		ListA = listA;
 	}
-	public void ajouterAchat(achat A)
-	{ListA.add(A);
+	public void ajouterAchat(achat A){
+		ListA.add(A);
 		}
 	//////////STREAM////////
 	public boolean rechercherAchat (int id) {
