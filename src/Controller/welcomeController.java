@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,7 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class homeController  implements Initializable   {
+public class welcomeController  implements Initializable   {
 	
 	
 	@Override
@@ -36,12 +37,31 @@ public class homeController  implements Initializable   {
     }
     
     @FXML
-    void getProduct(MouseEvent event) {
+    void getLogin(MouseEvent event) {
     	try {
     		Node node =(Node) event.getSource();
     		Stage stage1=(Stage) node.getScene().getWindow();
     		stage1.close();
-            Parent root1 = FXMLLoader.load(getClass().getResource("../view/product.fxml"));
+            Parent root1 = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root1,750,500);
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+	        stage.setResizable(false);
+
+    	} catch (IOException e) {
+            e.printStackTrace();
+      
+    }		
+    }
+    @FXML
+    void getClient(ActionEvent event) {
+    	try {
+    		Node node =(Node) event.getSource();
+    		Stage stage1=(Stage) node.getScene().getWindow();
+    		stage1.close();
+            Parent root1 = FXMLLoader.load(getClass().getResource("../view/homeClient.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(root1,750,500);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -52,15 +72,15 @@ public class homeController  implements Initializable   {
 			System.out.println("heloooo");
         } catch (IOException e) {
             e.printStackTrace();
-      
-    }}
+    }
+ }
     @FXML
-    void getCustomer(MouseEvent event) {
+    void getAdmin(ActionEvent event) {
     	try {
     		Node node =(Node) event.getSource();
     		Stage stage1=(Stage) node.getScene().getWindow();
     		stage1.close();
-            Parent root1 = FXMLLoader.load(getClass().getResource("../view/customer.fxml"));
+            Parent root1 = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(root1,750,500);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -71,42 +91,10 @@ public class homeController  implements Initializable   {
 			System.out.println("heloooo");
         } catch (IOException e) {
             e.printStackTrace();
-      
-        }
     }
-    
-    @FXML 
-    public void loginAction() {
-    	
-    }
-    
-    @FXML 
-    public void getUser() {
-    	
-    }
-    
-    @FXML
-    void getWelcome(MouseEvent event) {
-    
-  try {
-		Node node =(Node) event.getSource();
-		Stage stage1=(Stage) node.getScene().getWindow();
-		stage1.close();
-        Parent root1 = FXMLLoader.load(getClass().getResource("../view/home1.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(root1,750,500);
-		//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		stage.setScene(scene);
-		stage.show();
-        stage.setResizable(false);
 
-		System.out.println("heloooo");
-    } catch (IOException e) {
-        e.printStackTrace();
-        System.out.println("holaaaa");
     }
-}
-	
-}
+ }
+  
 	
 

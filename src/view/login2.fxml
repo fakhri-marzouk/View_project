@@ -62,6 +62,6 @@
          </image>
       </ImageView>
       <Text layoutX="492.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot your password?" />
-      <Label fx:id="lblErrors" layoutX="442.0" layoutY="269.0" prefHeight="17.0" prefWidth="198.0" textFill="#fc0000" />
+      <Label fx:id="lblErrors" layoutX="461.0" layoutY="269.0" prefHeight="25.0" prefWidth="198.0" textFill="#fc0000" />
    </children>
 </Pane>

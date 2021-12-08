@@ -2,32 +2,42 @@ package models;
 
 public class product {
 
-	private int id;
-	private float prix;
+	private String id;
+	private String price;
 	private String name;
-	private int quantity;
-	public int getId() {
+	private String quantity;
+	
+	public product(String id, String name,String price, String quantity) {
+		super();
+		this.id = id;
+		this.price = price;
+		this.name = name;
+		this.quantity = quantity;
+	}
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	public void setId(String id) {
 		this.id = id;
 	}
-	public float getPrix() {
-		return prix;
-	}
-	public void setPrix(float prix) {
-		this.prix = prix;
-	}
+	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(int quantity) {
+	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
+	
 }

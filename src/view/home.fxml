@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="Controller.homeController" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.homeController">
    <children>
       <HBox prefHeight="500.0" prefWidth="750.0" styleClass="..\styles\home.css">
          <children>
@@ -60,7 +60,7 @@
                   <Font name="Arial Rounded MT Bold" size="16.0" />
                </font>
             </Label>
-            <Label text="CATEGORY" textFill="#ce6a6b" translateX="10.0" translateY="139.0">
+            <Label text="PROVIDER" textFill="#ce6a6b" translateX="10.0" translateY="139.0">
                <font>
                   <Font name="Arial Rounded MT Bold" size="16.0" />
                </font>
@@ -98,5 +98,10 @@
             </HBox>
          </children>
       </Pane>
+      <ImageView fitHeight="42.0" fitWidth="73.0" layoutX="20.0" layoutY="20.0" onMouseClicked="#getWelcome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/home6.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

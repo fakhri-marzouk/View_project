@@ -18,7 +18,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -84,8 +83,8 @@ public class loginController implements Initializable {
 
 	private String logIn() {
         String status = "Success";
-		String email =txtUsername.getText().toString() ;
-		String password =txtPassword.getText().toString() ;
+		String email =this.txtUsername.getText().toString() ;
+		String password =this.txtPassword.getText().toString() ;
 		//query 
 		 if(email.isEmpty() || password.isEmpty()) {
 	            setLblError(Color.TOMATO, "Empty credentials");
