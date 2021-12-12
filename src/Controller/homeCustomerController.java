@@ -48,7 +48,21 @@ public class homeCustomerController {
 
 	    @FXML
 	    void getOrder(ActionEvent event) {
+	    	try {
+	    		Node node =(Node) event.getSource();
+	    		Stage stage1=(Stage) node.getScene().getWindow();
+	    		stage1.close();
+	            Parent root1 = FXMLLoader.load(getClass().getResource("../view/order.fxml"));
+	            Stage stage = new Stage();
+	            Scene scene = new Scene(root1,750,500);
+				//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+				stage.setScene(scene);
+				stage.show();
+		        stage.setResizable(false);
 
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
 	    }
 
 	    @FXML
@@ -69,14 +83,14 @@ public class homeCustomerController {
 	            e.printStackTrace();
 	        }
 	    }
+	  
 	    @FXML
-	    void getWelcome(MouseEvent event) {
-	    	   
+	    void getHomeClient(MouseEvent event) {
 	    	  try {
 	    			Node node =(Node) event.getSource();
 	    			Stage stage1=(Stage) node.getScene().getWindow();
 	    			stage1.close();
-	    	        Parent root1 = FXMLLoader.load(getClass().getResource("../view/homeCleint.fxml"));
+	    	        Parent root1 = FXMLLoader.load(getClass().getResource("../view/homeClient.fxml"));
 	    	        Stage stage = new Stage();
 	    	        Scene scene = new Scene(root1,750,500);
 	    			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -88,5 +102,67 @@ public class homeCustomerController {
 	    	        e.printStackTrace();
 	    	    }
 	    }
+	    
+	    @FXML
+	    void getWelcome(MouseEvent event) {
+	    	  try {
+	    			Node node =(Node) event.getSource();
+	    			Stage stage1=(Stage) node.getScene().getWindow();
+	    			stage1.close();
+	    	        Parent root1 = FXMLLoader.load(getClass().getResource("../view/signup.fxml"));
+	    	        Stage stage = new Stage();
+	    	        Scene scene = new Scene(root1,750,500);
+	    			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+	    			stage.setScene(scene);
+	    			stage.show();
+	    	        stage.setResizable(false);
+
+	    	    } catch (IOException e) {
+	    	        e.printStackTrace();
+	    	    }
+	    }
+	    
+	    @FXML
+	    void getAccount(MouseEvent event) {
+	    	try {
+	    		Node node =(Node) event.getSource();
+	    		Stage stage1=(Stage) node.getScene().getWindow();
+	    		stage1.close();
+	            Parent root1 = FXMLLoader.load(getClass().getResource("../view/customer.fxml"));
+	            Stage stage = new Stage();
+	            Scene scene = new Scene(root1,750,500);
+				//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+				stage.setScene(scene);
+				stage.show();
+		        stage.setResizable(false);
+
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	      
+	        }
+	    }
+	    
+
+	    @FXML
+	    void logOut(MouseEvent event) {
+	    	 try {
+	   			Node node =(Node) event.getSource();
+	   			Stage stage1=(Stage) node.getScene().getWindow();
+	   			stage1.close();
+	   	        Parent root1 = FXMLLoader.load(getClass().getResource("../view/signup.fxml"));
+	   	        Stage stage = new Stage();
+	   	        Scene scene = new Scene(root1,750,500);
+	   			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+	   			stage.setScene(scene);
+	   			stage.show();
+	   	        stage.setResizable(false);
+
+	   	    } catch (IOException e) {
+	   	        e.printStackTrace();
+	   	    }
+	    }
+
+
+
 
 }

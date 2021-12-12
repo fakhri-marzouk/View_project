@@ -42,8 +42,7 @@ public class loginController implements Initializable {
 	@FXML
 	   void gethome(ActionEvent event) {
 		  
-	            System.out.println("helooooo");
-	            if (logIn().equals("Success")) {
+	            if (logIn().equals("admin")) {
 		  try {
 	    		Node node =(Node) event.getSource();
 	    		Stage stage1=(Stage) node.getScene().getWindow();
@@ -56,13 +55,29 @@ public class loginController implements Initializable {
 				stage.show();
 		        stage.setResizable(false);
 
-				System.out.println("heloooo");
 	        } catch (IOException e) {
 	            e.printStackTrace();
-	            System.out.println("holaaaa");
 	        }
 		 
-		  }  
+		  } 
+	            else {
+	          		  try {
+	          	    		Node node =(Node) event.getSource();
+	          	    		Stage stage1=(Stage) node.getScene().getWindow();
+	          	    		stage1.close();
+	          	            Parent root1 = FXMLLoader.load(getClass().getResource("../view/homeClient.fxml"));
+	          	            Stage stage = new Stage();
+	          	            Scene scene = new Scene(root1,750,500);
+	          				//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+	          				stage.setScene(scene);
+	          				stage.show();
+	          		        stage.setResizable(false);
+
+	          	        } catch (IOException e) {
+	          	            e.printStackTrace();
+	          	        }
+	                }
+	           
 	    }
 
 	@Override
@@ -82,14 +97,14 @@ public class loginController implements Initializable {
 	    }
 
 	private String logIn() {
-        String status = "Success";
+        String status = "";
 		String email =this.txtUsername.getText().toString() ;
 		String password =this.txtPassword.getText().toString() ;
 		//query 
 		 if(email.isEmpty() || password.isEmpty()) {
 	            setLblError(Color.TOMATO, "Empty credentials");
 	            status = "Error";
-	        } else {
+	        } else if(txtUsername.getText().equals("admin")) {
 	            //query
 	            String sql = "SELECT * FROM admin Where email = ? and password = ?";
 	            try {
@@ -102,11 +117,32 @@ public class loginController implements Initializable {
 	                    status = "Error";
 	                } else {
 	                    setLblError(Color.GREEN, "Login Successful..Redirecting..");
-	                }
+	                    status ="admin"	 ;               
+	                    		}
 	            } catch (SQLException ex) {
 	                System.err.println(ex.getMessage());
 	                status = "Exception";
 	            }
+	        }
+	        else {
+	        	 String sql = "SELECT * FROM admin Where email = ? and password = ?";
+		            try {
+		                preparedStatement = con.prepareStatement(sql);
+		                preparedStatement.setString(1, email);
+		                preparedStatement.setString(2, password);
+		                resultSet = preparedStatement.executeQuery();
+		                if (!resultSet.next()) {
+		                    setLblError(Color.TOMATO, "Enter Correct Email/Password");
+		                    status = "Error";
+		                } else {
+		                    setLblError(Color.GREEN, "Login Successful..Redirecting..");
+		                    status ="user"	 ;               
+		                    		}
+		            } catch (SQLException ex) {
+		                System.err.println(ex.getMessage());
+		                status = "Exception";
+		            }
+	        	
 	        }
 	        
 	        return status;

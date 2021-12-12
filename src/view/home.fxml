@@ -40,22 +40,22 @@
                   <Font name="Arial Rounded MT Bold" size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" translateX="-9.0" translateY="255.0">
+            <ImageView fitHeight="78.0" fitWidth="79.0" onMouseClicked="#getOrder" pickOnBounds="true" preserveRatio="true" translateX="-9.0" translateY="255.0">
                <image>
                   <Image url="@../images/sold.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="55.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" translateX="209.0" translateY="400.0">
+            <ImageView fitHeight="55.0" fitWidth="69.0" onMouseClicked="#getUser" pickOnBounds="true" preserveRatio="true" translateX="209.0" translateY="400.0">
                <image>
                   <Image url="@../images/newcust.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="73.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true" translateX="131.0" translateY="167.0">
+            <ImageView fitHeight="73.0" fitWidth="106.0" onMouseClicked="#getProvider" pickOnBounds="true" preserveRatio="true" translateX="131.0" translateY="167.0">
                <image>
                   <Image url="@../images/categorie.png" />
                </image>
             </ImageView>
-            <Label text="USER" textFill="#ce6a6b" translateX="92.0" translateY="359.0">
+            <Label text="Log out" textFill="#ce6a6b" translateX="92.0" translateY="359.0">
                <font>
                   <Font name="Arial Rounded MT Bold" size="16.0" />
                </font>
@@ -77,7 +77,7 @@
                </font>
             </Label>
             
-            <Label layoutX="317.0" layoutY="43.0" text="MAIN FORM" textFill="WHITE">
+            <Label layoutX="317.0" layoutY="43.0" text="MAIN HOME" textFill="WHITE">
                <font>
                   <Font name="Bodoni MT Black" size="18.0" />
                </font>
@@ -89,9 +89,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#closeAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgba(0, 88, 122, 1); -fx-background-image: url(&quot;../images/close.png&quot;);" styleClass="close-button">
+                  <Button mnemonicParsing="false" onAction="#minusAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgba(0, 88, 122, 1);" styleClass="minus-button">
                      <cursor>
-                        <Cursor fx:constant="DEFAULT" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
                </children>
@@ -101,6 +101,16 @@
       <ImageView fitHeight="42.0" fitWidth="73.0" layoutX="20.0" layoutY="20.0" onMouseClicked="#getWelcome" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/home6.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="681.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/minus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="26.0" layoutX="735.0" layoutY="-115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/close.png" />
          </image>
       </ImageView>
    </children>

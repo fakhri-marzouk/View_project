@@ -49,7 +49,6 @@ public class homeController  implements Initializable   {
 			stage.show();
 	        stage.setResizable(false);
 
-			System.out.println("heloooo");
         } catch (IOException e) {
             e.printStackTrace();
       
@@ -68,7 +67,6 @@ public class homeController  implements Initializable   {
 			stage.show();
 	        stage.setResizable(false);
 
-			System.out.println("heloooo");
         } catch (IOException e) {
             e.printStackTrace();
       
@@ -80,10 +78,6 @@ public class homeController  implements Initializable   {
     	
     }
     
-    @FXML 
-    public void getUser() {
-    	
-    }
     
     @FXML
     void getWelcome(MouseEvent event) {
@@ -92,7 +86,7 @@ public class homeController  implements Initializable   {
 		Node node =(Node) event.getSource();
 		Stage stage1=(Stage) node.getScene().getWindow();
 		stage1.close();
-        Parent root1 = FXMLLoader.load(getClass().getResource("../view/home1.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("../view/signup.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root1,750,500);
 		//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -100,13 +94,67 @@ public class homeController  implements Initializable   {
 		stage.show();
         stage.setResizable(false);
 
-		System.out.println("heloooo");
     } catch (IOException e) {
         e.printStackTrace();
-        System.out.println("holaaaa");
     }
 }
-	
+    @FXML
+    void getUser(MouseEvent event) {
+    	 try {
+    			Node node =(Node) event.getSource();
+    			Stage stage1=(Stage) node.getScene().getWindow();
+    			stage1.close();
+    	        Parent root1 = FXMLLoader.load(getClass().getResource("../view/signup.fxml"));
+    	        Stage stage = new Stage();
+    	        Scene scene = new Scene(root1,750,500);
+    			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+    			stage.setScene(scene);
+    			stage.show();
+    	        stage.setResizable(false);
+
+    	    } catch (IOException e) {
+    	        e.printStackTrace();
+    	    }
+    }
+    
+    @FXML
+    void getOrder(MouseEvent event) {
+    	 try {
+ 			Node node =(Node) event.getSource();
+ 			Stage stage1=(Stage) node.getScene().getWindow();
+ 			stage1.close();
+ 	        Parent root1 = FXMLLoader.load(getClass().getResource("../view/orderAdmin.fxml"));
+ 	        Stage stage = new Stage();
+ 	        Scene scene = new Scene(root1,750,500);
+ 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+ 			stage.setScene(scene);
+ 			stage.show();
+ 	        stage.setResizable(false);
+
+ 	    } catch (IOException e) {
+ 	        e.printStackTrace();
+ 	    }
+    }
+    
+    @FXML
+    void getProvider(MouseEvent event) {
+    	 try {
+  			Node node =(Node) event.getSource();
+  			Stage stage1=(Stage) node.getScene().getWindow();
+  			stage1.close();
+  	        Parent root1 = FXMLLoader.load(getClass().getResource("../view/provider.fxml"));
+  	        Stage stage = new Stage();
+  	        Scene scene = new Scene(root1,750,500);
+  			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+  			stage.setScene(scene);
+  			stage.show();
+  	        stage.setResizable(false);
+
+  	    } catch (IOException e) {
+  	        e.printStackTrace();
+  	    }
+    }
+
 }
 	
 
